@@ -1,0 +1,14 @@
+# Use default application name and no profile configured
+# Keys starting with /application/ will be matched
+
+spring:
+  cloud:
+    azure:
+      appconfiguration:
+        watch:
+          delay: 5s
+          enabled: true
+
+        stores:
+        - connection-string: XXXXX
+          label: dev
