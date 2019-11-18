@@ -1,7 +1,7 @@
 # spring-boot-azure-app-config
 Simple Spring Boot Service using Azure App Config
 
-The code containers **applicaiton.properties** and **application-dev.properties**.
+The code containers **application.properties** and **application-dev.properties**.
 
 Modify the connection string in the property files to point to your own Azure App Configuration Store connection string.
 
