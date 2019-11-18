@@ -11,3 +11,4 @@ spring:
 
         stores:
         - connection-string: your-connection-string-here
+          label: test        
