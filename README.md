@@ -1,9 +1,11 @@
 # spring-boot-azure-app-config
 Simple Spring Boot Service using Azure App Config
 
-The code containers **application.properties** and **application-dev.properties**.
+This is a simple application that shows how to use spring profiles to access key/values across different environments tagged as labels in Azure App Config.
 
-Modify the connection string in the property files to point to your own Azure App Configuration Store connection string.
+The code contains **bootstrap.properties**, **bootstrap-dev.properties** and **bootstrap-test.properties** which have different labels referring to the different environments. They all have the same connection strings, the differentiator being the labels.
+
+Note: Modify the connection string in the property files to point to your own Azure App Configuration Store connection string.
 
 Create 2 keys in your config store as below:
 
@@ -15,6 +17,14 @@ Run **mvnw package** to build the code.
 
 Run **java -jar target\spring-boot-azure-app-config-0.0.1-SNAPSHOT.jar** to tell spring to pick the default profile
 
+curl -X http://localhost:8080 should print "Hello"
+
 **Dev Profile**
 
 Run **java -Dspring.profiles.active=dev -jar target\spring-boot-azure-app-config-0.0.1-SNAPSHOT.jar** to tell spring to pick dev as the active profile.
+
+curl -X http://localhost:8080 should print "Hello Dev"
+
+Run **java -Dspring.profiles.active=test -jar target\spring-boot-azure-app-config-0.0.1-SNAPSHOT.jar** to tell spring to pick dev as the active profile.
+
+
