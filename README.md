@@ -17,14 +17,14 @@ Run **mvnw package** to build the code.
 
 Run **java -jar target\spring-boot-azure-app-config-0.0.1-SNAPSHOT.jar** to tell spring to pick the default profile
 
-curl -X http://localhost:8080 should print "Hello"
+curl http://localhost:8080 should print "Hello"
 
 **Dev Profile**
 
 Run **java -Dspring.profiles.active=dev -jar target\spring-boot-azure-app-config-0.0.1-SNAPSHOT.jar** to tell spring to pick dev as the active profile.
 
-curl -X http://localhost:8080 should print "Hello Dev"
+curl http://localhost:8080 should print "Hello Dev"
 
 Run **java -Dspring.profiles.active=test -jar target\spring-boot-azure-app-config-0.0.1-SNAPSHOT.jar** to tell spring to pick dev as the active profile.
 
-
+curl http://localhost:8080 should print "Hello Test"
