@@ -3,7 +3,7 @@ Simple Spring Boot Service using Azure App Config
 
 This is a simple application that shows how to use spring profiles to access key/values across different environments tagged as labels in Azure App Config.
 
-The code contains **bootstrap.properties**, **bootstrap-dev.properties** and **bootstrap-test.properties** which have different labels referring to the different environments. They all have the same connection strings, the differentiator being the labels.
+The code contains **bootstrap.yml**, **bootstrap-dev.yml** and **bootstrap-test.yml** which have different labels referring to the different environments. They all have the same connection strings, the differentiator being the labels.
 
 Note: Modify the connection string in the property files to point to your own Azure App Configuration Store connection string.
 
